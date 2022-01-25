@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site aumentando e diminuindo o tamanho do navegador</p>
+    <picture>
+        <source media="(max-width: 730px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1030px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <!-- Os Sources precisam estar na sequência sempre, caso contrário não funcionará, basta testar -->
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudio em HTML5</p>
+    <audio preload="metadata" controls> 
+    <!-- O atributo preload indica se o áudio será pré-carregado ou não, metadata vai carregar apenas as informações sobre o arquivo (tamanho,
+    tempo, informações de direitos, etc-->
+        <source src="midias/Floating Home - Brian Bolger.mp3" type="audio/mpeg">
+        <source src="midias/Floating Home - Brian Bolger.ogg" type="audio/ogg">
+        <source src="midias/Floating Home - Brian Bolger.wav" type="audio/wav">
+        <!-- Evitar WAV pois são arquivos grandes -->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.
+            <a href="midias/Floating Home - Brian Bolger.mp3" download="Floating Home - Brian Bolger.mp3">Clique aqui para baixar o arquivo MP3</a>
+        </p>
+    </audio>
+    <!-- Extensões de áudio compatíveis  MP3 WAV OGG-->
+</body>
+</html>
