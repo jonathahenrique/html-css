@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela005</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+
+        th,td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        col.cnome {
+            background-color: greenyellow;
+        }
+
+        col.csexo {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Execnomercício de Tabela</h1>
+    <table>
+        <colgroup>
+            <col class="cnome" span="2">
+            <col class="csexo" span="2">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>Feminino</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Jonatha</td>
+            <td>Masculino</td>
+            <td>20</td>
+            <td>Desenvolvedor</td>
+        </tr>
+        <tr>
+            <td>Giovanny</td>
+            <td>Masculino</td>
+            <td>17</td>
+            <td>Qualidade</td>
+        </tr>
+        <tr>
+            <td>Elton</td>
+            <td>Masculino</td>
+            <td>39</td>
+            <td>Desenvolvedor</td>
+        </tr>
+        <tr>
+            <td>Flávia</td>
+            <td>Feminino</td>
+            <td>19</td>
+            <td>Professora/Empresária</td>
+        </tr>
+        <tr>
+            <td>Regiane</td>
+            <td>Feminino</td>
+            <td>40</td>
+            <td>Recepcionista</td>
+        </tr>
+    </table>
+</body>
+</html>
