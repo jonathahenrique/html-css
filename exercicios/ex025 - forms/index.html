@@ -4,15 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulários</title>
+    <style>
+        body {
+            background-color: blanchedalmond; 
+            margin: 0px;  
+            padding: 0px;
+            width: 100%;               
+        }
+
+        main {            
+            width: 600px;
+            height: 800px;
+            margin: auto;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <form action="cadastro.php" method="get">
-        <label for="user">Nome:</label>
-        <input type="text" name="nome" id="user">
-        <label for=""></label>
-        <input type="button" value="Enviar">
-        <input type="reset" value="Limpar">
-    </form>
+    <main>
+        <h1>Iniciando com Formulários</h1>
+        <form action="cadastro.php" method="get">
+            <!-- Nome input text-->
+            <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome"></p>
+            <!-- E-mail input email -->
+            <p><label for="imail">E-mail:</label>
+            <input type="email" name="mail" id="imail"></p>
+            <!-- Senha input password-->
+            <p><label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha"></p>
+            <!-- Idade input number -->
+            <p><label for="iidade">Idade:</label>
+            <input type="number" name="idade" id="iidade" min="1" max="120"></p>
+            <!-- Sexo input radio dentro de fieldset -->
+            <p><fieldset style="width: 100px; border-radius: 10px;">
+                <legend>Sexo</legend>
+                <input type="radio" name="sex" id="isexmasc" checked>
+                <label for="isexmasc">Masculino</label>
+                <input type="radio" name="sex" id="isexfem">
+                <label for="isexfem">Feminino</label>
+            </fieldset></p>
+            <!-- Envio de foto -->
+            <p><label for="ifoto">Foto de perfil: </label><input type="file" name="foto" id="ifoto"></p>
+            <!-- Telefone input tel -->
+            <p><label for="itel">Telefone:</label>
+            <input type="tel" name="tel" id="itel" pattern="\([0-9]{2}\)([\s])[0-9]{4,6}[0-9]{4}" placeholder="(99) 99999-9999"></p>
+            <!-- Mês input month -->
+            <p><label for="imes">Mês de aniversário:</label>                
+            <input type="month" name="mes" id="imes"></p>
+            <!-- Data input date -->
+            <p><label for="idata">Data:</label>                
+            <input type="date" name="data" id="idata"></p>
+            <!-- Horário input time -->
+            <p><label for="ihora">Hora:</label>
+            <input type="time" name="hora" id="ihora"></p>
+            <!-- Cor input color -->
+            <p><label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor"></p>
+            <!-- Satisfação input range -->
+            <p><label for="isat">Nível de Satisfação:</label>
+            <input type="range" name="sat" id="isat" min="0" max="4" value="2"></p>
+            <!-- Checkbox termos -->
+            <p><input type="checkbox" name="aceito" id="iaceito">
+            <label for="iaceito">Aceito os <a href="termos.html" target="_blank">termos de uso</a></label></p>            
+            <!-- Botões input button e reset -->
+            <input type="button" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
 </body>
 </html>
